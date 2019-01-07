@@ -1,10 +1,8 @@
 # docker-lamp
-Docker example with Apache, MySql 5.7, PhpMyAdmin and Php
-
-I use docker-compose as an orchestrator. To run these containers:
+Docker example with Apache, MySql 5.7, PhpMyAdmin and PHP 7.3.
 
 ```
-docker-compose up -d
-```
 
-That's it!
+Workspace container runs PHP 7.2, git, composer, and other tools needed for development.
+
+

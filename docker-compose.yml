@@ -5,7 +5,7 @@ services:
         ports: 
             - "8001:80"
         volumes:
-            - ./www:/var/www/html/
+            - ./www:/var/www/
         links:
             - db
         networks:
@@ -33,6 +33,14 @@ services:
         environment:
             MYSQL_USER: user
             MYSQL_PASSWORD: test
-            MYSQL_ROOT_PASSWORD: test 
+            MYSQL_ROOT_PASSWORD: test
+    workspace:
+        build: workspace
+        volumes:
+            - ./www:/var/www/
+        links:
+            - db
+        networks:
+            - default
 volumes:
     persistent:
