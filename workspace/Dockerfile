@@ -59,6 +59,8 @@ RUN apt-get update && \
         libsqlite3-dev \
         sqlite3 \
         git \
+	zip \
+	unzip \
         curl \
         vim \
         nano \
