@@ -61,6 +61,7 @@ RUN apt-get update && \
         git \
 	zip \
 	unzip \
+	wget \
         curl \
         vim \
         nano \
