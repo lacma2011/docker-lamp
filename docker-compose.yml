@@ -64,5 +64,14 @@ services:
             nofile:
                 soft: 20000
                 hard: 40000
+    selenium:
+        build: selenium
+        entrypoint: "/opt/bin/start-selenium-standalone.sh"
+        networks:
+            - default
+        volumes:
+            - /dev/shm:/dev/shm
+        external_links:
+            - www:fisherman.docker
 volumes:
     persistent:
