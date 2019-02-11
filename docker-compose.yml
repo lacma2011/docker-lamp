@@ -44,26 +44,6 @@ services:
             - db
         networks:
             - default
-
-    # like workspace but with ubuntu non-optimal base image
-    # TODO: needs an entrypoint to keep service up
-    phpspace:
-        build: phpspace
-        volumes:
-            - ./www:/var/www/
-        links:
-            - db
-        networks:
-            - default
-        cpu_count: 2
-        cpu_percent: 50
-        cpus: 1.5
-        cpu_shares: 73
-        ulimits:
-            nproc: 65535
-            nofile:
-                soft: 20000
-                hard: 40000
     selenium:
         build: selenium
         entrypoint: "/opt/bin/start-selenium-standalone.sh"
