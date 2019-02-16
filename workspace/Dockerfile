@@ -81,5 +81,10 @@ RUN curl -s http://getcomposer.org/installer | php && \
     echo "export PATH=${PATH}:/var/www/vendor/bin" >> ~/.bashrc && \
     mv composer.phar /usr/local/bin/composer
 
+# Download phpunit for test scripts
+RUN wget -O phpunit https://phar.phpunit.de/phpunit-7.phar && \
+    chmod +x phpunit && \
+    mv phpunit /usr/local/bin
+
 # Source the bash
 RUN . ~/.bashrc
